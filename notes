@@ -1,0 +1,17 @@
+Count the number of requested in each month: Done without AI
+Record time taken for client to review the case and move to "Case Accepted" or "Case with Waiver Accepted":
+Insert correct SLA rating into excel file based on above:
+
+Monitor performance on internal tea, at an individual level:
+Number of cases sent for outreach to end-client by user:
+Number of screening alerts cleared per user/per month (status move to "Confirmed-False Positive" or "Confirmed - Positive")
+
+
+How to test:
+ - Either compare an old DB to a new one, any changes increase the 'score'.
+ - Send a new update, store case IDs in the 'score' file, any new IDs with a desired status increases the 'score'.
+
+What to do:
+ - Create df for score now, check the status, if it's positive add the ID and details to df.
+ - Input an updated df, check for positive status and check if ID is in score df, if not then add the details.
+ - Plot by person, month and number of cases.
